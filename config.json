@@ -3,7 +3,12 @@
     "redis": {
       "address": "io.tiler.example.redis",
       "host": "localhost",
-      "port": 6379
+      "port": 6379,
+      "keyPrefix": "io.tiler.example:"
     }
+  },
+  "example": {
+    "collectionInterval": "10s",
+    "metricNamePrefix": "examples."
   }
 }

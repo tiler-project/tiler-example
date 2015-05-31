@@ -1,4 +1,6 @@
 {
+  "main":"io.tiler.example.MainVerticle",
+
   "description":"Example dashboards created wih Tiler",
   "licenses": ["MIT"],
   "author": "Simon Dean",
@@ -14,5 +16,5 @@
   "homepage": "https://github.com/tiler-project/tiler-example",
 
   "auto-redeploy": true,
-  "includes": "io.tiler~tiler~0.1.7,org.simondean.vertx~vertx-async~0.1.1"
+  "includes": "io.tiler~tiler~0.1.8,org.simondean.vertx~vertx-async~0.1.2"
 }
