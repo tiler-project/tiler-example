@@ -16,7 +16,7 @@ public class MainVerticle extends Verticle {
 
     Async.series()
       .task(handler -> container.deployVerticle("io.tiler.ServerVerticle", config.getObject("server"), 1, AsyncResultHandlerWrapper.wrap(handler)))
-      .task(handler -> container.deployModule("io.tiler~tiler-collector-example~0.1.0", config.getObject("example"), 1, AsyncResultHandlerWrapper.wrap(handler)))
+      .task(handler -> container.deployModule("io.tiler~tiler-collector-example~0.1.1", config.getObject("example"), 1, AsyncResultHandlerWrapper.wrap(handler)))
       .run(result -> {
         if (result.failed()) {
           startedResult.setFailure(result.cause());
