@@ -7,12 +7,14 @@
 This codebase includes a sample dashboard created using [Tiler](https://github.com/tiler-project/tiler)
 
 Prerequisites:
+
   * Install Oracle JDK 1.8+
   * Install Maven 3.2+
   * Install node.js 0.10+
   * Install Redis 2.8+
 
 You then need to clone this repository and run:
+
   * $ npm install
   * $ npm install -g grunt-cli
   * $ grunt build
@@ -29,13 +31,14 @@ When using the Docker container, it's not possible to modify the sample dashboar
 
 ## API
 
-There are two ways to get metrics into Tiler: i) using collectors like https://github.com/tiler-project/tiler-collector-sonarqube and ii) using Tiler's API. 
+There are two ways to get metrics into Tiler: i) using collectors like https://github.com/tiler-project/tiler-collector-sonarqube and ii) using Tiler's API.
 
 ### Create Metrics
 
 HTTP POST http://localhost:8080/api/metrics
 
 Headers:
+
   * Content-Type: application/json
 
 Request Body:
