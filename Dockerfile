@@ -32,7 +32,7 @@ RUN \
   cp target/tiler-example-*-fat.jar /opt/tiler-example && \
   cp config.json /opt/tiler-example && \
   rm -rf /var/lib/apt/lists/* && \
-  rm -rf /var/cache/oracle-jdk8-installer && \
+  rm -rf /var/cache/oracle-jdk8-installer
 
 WORKDIR /opt/tiler-example
 
