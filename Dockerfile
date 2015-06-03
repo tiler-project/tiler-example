@@ -40,4 +40,4 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 EXPOSE 8080
 
-CMD redis-server --daemonize yes && java tiler-example-*-fat.jar -conf config.json
+CMD redis-server --daemonize yes && java -jar tiler-example-*-fat.jar -conf config.json
