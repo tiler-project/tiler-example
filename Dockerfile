@@ -23,6 +23,7 @@ RUN \
   make install && \
   cd /tmp && \
   apt-get install -y oracle-java8-installer && \
+  apt-get install -y maven && \
   cd /tmp/tiler-example && \
   npm install && \
   grunt build && \
