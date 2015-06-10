@@ -14,7 +14,7 @@ React.render(
     <LineChartTile key={1} _grid={{x: 0, y: 0, w: 6, h: 20}}
       title={'Line Chart'}
       query={{
-        metric: {label: 'name'},
+        metric: {label: {'name': {$replace: {$pattern: '(One)', $replacement: 'Hello $1'}}}},
         point: {time: 'time', value: {value: '$mean'}},
         from: 'examples.random-numbers',
         where: {time: {$gte: {$minus: ['$now', '5m']}}, name: {$regex: {$pattern: '^One|Two|Three|Four$'}}},
@@ -31,6 +31,35 @@ React.render(
       }}
       suffix={'%'} />
     <ListTile key={3} _grid={{x: 6, y: 6, w: 2, h: 14}} title={'List'} ordered={false}
+      bands={[
+        {
+          min: 80,
+          styles: {
+            item: {
+              backgroundColor: '#33a02c'
+            }
+          }
+        },
+        {
+          max: 80,
+          maxExclusive: true,
+          min: 70,
+          styles: {
+            item: {
+              backgroundColor: '#ff7f00'
+            }
+          }
+        },
+        {
+          max: 70,
+          maxExclusive: true,
+          styles: {
+            item: {
+              backgroundColor: '#e31a1c'
+            }
+          }
+        }
+      ]}
       query={{
         point: {label: {name: '$last'}, value: {value: '$last'}},
         from: 'examples.random-numbers',
