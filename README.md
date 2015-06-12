@@ -28,36 +28,3 @@ The example dashboard is also available as a Docker container:
   * $ docker run tiler/tiler-example
 
 When using the Docker container, it's not possible to modify the sample dashboard.
-
-## API
-
-There are two ways to get metrics into Tiler: i) using collectors like https://github.com/tiler-project/tiler-collector-sonarqube and ii) using Tiler's API.
-
-### Create Metrics
-
-HTTP POST http://localhost:8080/api/metrics
-
-Headers:
-
-  * Content-Type: application/json
-
-Request Body:
-
-``` json
-{
-    "metrics": [{
-        "name": "examples.api",
-        "points": [{
-            "time": 1,
-            "value": 10
-        },
-        {
-            "time": 2,
-            "value": 20
-        }]
-    }]
-}
-```
-
-View the metric by browsing to http://localhost:8080/dashboards/api
-
