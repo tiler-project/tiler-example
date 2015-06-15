@@ -11,7 +11,7 @@
     "normalize.css": "^3.0.2",
     "react": "^0.13.0",
     "reactify": "^1.0.0",
-    "tiler": "^0.1.4",
+    "tiler": "^0.1.6",
     "tiler-contrib-line-chart-tile": "^0.1.8",
     "tiler-contrib-list-tile": "^0.1.7",
     "tiler-contrib-number-tile": "^0.1.4"
