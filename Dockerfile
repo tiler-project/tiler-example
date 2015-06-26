@@ -1,7 +1,5 @@
 FROM library/ubuntu
 
-COPY . /tmp/tiler-example
-
 WORKDIR /tmp
 
 RUN \
@@ -24,6 +22,12 @@ RUN \
   cd /tmp && \
   apt-get install -y oracle-java8-installer && \
   apt-get install -y maven && \
+  rm -rf /var/lib/apt/lists/* && \
+  rm -rf /var/cache/oracle-jdk8-installer
+
+COPY . /tmp/tiler-example
+
+RUN \
   cd /tmp/tiler-example && \
   npm install && \
   grunt build && \
@@ -31,8 +35,6 @@ RUN \
   mkdir /opt/tiler-example && \
   cp target/tiler-example-*-fat.jar /opt/tiler-example && \
   cp config.json /opt/tiler-example && \
-  rm -rf /var/lib/apt/lists/* && \
-  rm -rf /var/cache/oracle-jdk8-installer
 
 WORKDIR /opt/tiler-example
 
