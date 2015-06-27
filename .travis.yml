@@ -9,8 +9,8 @@ before_install:
 
 install:
 - npm install
-- npm install -g grunt-cli@0.1.13
-- grunt build
+- npm install -g gulp
+- gulp build
 - mvn install -DskipTests=true
 
 script:
