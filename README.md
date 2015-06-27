@@ -16,9 +16,8 @@ Prerequisites:
 You then need to clone this repository and run:
 
   * $ npm install
-  * $ npm install -g grunt-cli
-  * $ grunt build
-  * $ mvn package vertx:runMod
+  * $ npm install -g gulp
+  * $ gulp build && mvn package vertx:runMod
   * Open http://localhost:8080/dashboards/sample in a browser
 
 ### Docker

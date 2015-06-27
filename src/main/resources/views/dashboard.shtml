@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>${dashboardName}</title>
-  <link rel="stylesheet" href="/static/styles/dashboard.built.css">
+  <link rel="stylesheet" href="/static/styles/dashboard.css">
   <style>
     body {
       background-color: #151515
@@ -19,6 +19,6 @@
 </head>
 <body>
 <div id="content"></div>
-<script src="/static/scripts/dashboards/${dashboardName}.built.js"></script>
+<script src="/static/scripts/dashboards/${dashboardName}.js"></script>
 </body>
 </html>
