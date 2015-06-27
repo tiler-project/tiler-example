@@ -5,13 +5,11 @@ var minifyCss = require('gulp-minify-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
-var transform = require('vinyl-transform');
 var browserify = require ('browserify');
 var reactify = require ('reactify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var globby = require('globby');
-var through = require('through2');
 var eventStream = require('event-stream');
 var gutil = require ('gulp-util');
 
@@ -30,52 +28,6 @@ gulp.task('clean', function(done) {
 });
 
 gulp.task('scripts', function(done) {
-  //return gulp.src(paths.dashboards)
-  //  .pipe(transform(function(filename) {
-  //    var b = browserify(filename, {
-  //      debug: true,
-  //      transform: [
-  //        [reactify, {harmony: true}]
-  //      ]
-  //    });
-  //
-  //    return b.bundle();
-  //  }))
-  //  //.pipe(buffer())
-  //  //.pipe(sourcemaps.init({loadMaps: true}))
-  //  //.pipe(uglify())
-  //  //.on('error', gutil.log)
-  //  //.pipe(sourcemaps.write('./'))
-  //  .pipe(gulp.dest(paths.scriptsBuild));
-
-  //var bundledStream = through();
-  //
-  //bundledStream
-  //  .pipe(source('app.js'))
-  //  .pipe(buffer())
-  //  .pipe(sourcemaps.init({loadMaps: true}))
-  //  .pipe(uglify())
-  //  .on('error', gutil.log)
-  //  .pipe(sourcemaps.write('./'))
-  //  .pipe(gulp.dest(paths.scriptsBuild));
-  //
-  //globby([paths.dashboards], function(err, entries) {
-  //  if (err) {
-  //    bundledStream.emit('error', err);
-  //    return;
-  //  }
-  //
-  //  var b = browserify({
-  //    entries: entries,
-  //    debug: true,
-  //    transform: [reactify]
-  //  });
-  //
-  //  b.bundle().pipe(bundledStream);
-  //});
-  //
-  //return bundledStream;
-
   globby(paths.dashboards, function(err, files) {
     if (err) {
       done(err);
